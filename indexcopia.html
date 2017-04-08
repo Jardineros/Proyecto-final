@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.Encabezado
+		{
+			background-color: green;
+			position: fixed;
+
+		}
+		.bs-example
+		{
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			margin-bottom: 15px;
+			position: relative;
+		}
+	    .Logo > img
+	    {
+	    	height: 70px;
+	    	width: 30%;
+	    	float: left;
+	    	
+	    }
+
+	    .Logo2 > img
+	    {
+	    	width: 70%;
+	    	height: 70px;
+	    }
+
+	    #fondo
+	    {
+	    	position: fixed;
+	    	background-image: url('Imagenes/Fondo.jpg');
+	    	width: 100%;
+	    	height: 100%;
+	    }
+
+        .carousel-inner > .item > img,
+   		 .carousel-inner > .item > a > img {
+      	width: 70%;
+      	margin: auto;
+
+  		}
+  		.Trans
+  		{ 
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	background-color: rgba(0,0,0,0.5);
+  		}
+  		
+  		.Titulo
+  		{
+  			color: white;
+    	    font-size: 30px;
+
+  		}
+  		.Infor
+  		{
+  			color: white;
+    	    font-size: 15px;
+
+  		}
+  		.masInfo > a
+  		{
+  			position: absolute;
+  			bottom: 20%;
+  			right: 20%;
+  			color: white;
+    	    font-size: 15px;
+  		}
+
+
+      .Articulo1
+ 		{ 
+    	position: absolute;
+    	height: 130px;
+		top:700px;
+    	background-color: white;
+  		}
+		
+		.Articulo1:Hover{
+		background-color:#e2e0e0;
+		}
+		
+		.Articulo2
+ 		{ 
+    	position: absolute;
+    	height: 130px;
+		top:840px;
+    	background-color: white;
+  		}
+		
+		.Articulo2:Hover{
+		background-color:#e2e0e0;
+		}
+		
+		.Articulo3
+ 		{ 
+    	position: absolute;
+    	height: 130px;
+		top:980px;
+    	background-color: white;
+  		}
+		
+		.Articulo3:Hover{
+		background-color:#e2e0e0;
+		}
+		
+		.Articulo4
+ 		{ 
+    	position: absolute;
+    	height: 130px;
+		top:1120px;
+    	background-color: white;
+  		}
+		
+		.Articulo4:Hover{
+		background-color:#e2e0e0;
+		}
+
+
+
+
+	</style>
+	<title>Casa Jardin</title>
+</head>
+<body>
+
+<div class="row">
+	<div id="fondo"></div>
+</div>
+
+
+<div class="row">
+
+	<div class="container">
+		<div class="bs-example">
+		    <div class="Logo">
+			<img src="Imagenes/Logo.png" width="300px" height="100px">
+			</div>
+			<div class="Logo2">
+				<img src="Imagenes/encabezado2.png" width="800px" height="100px">
+			</div>
+		</div>
+
+	<div id="menu">
+	 <nav class="navbar navbar-default">
+
+	   <!-- Collect the nav links, forms, and other content for toggling -->
+	 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav">
+			<li>
+			<a href="#" onclick="Inicio()">Inicio</a>	
+			</li>
+			<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#">Arboles</a>
+				</li>
+				<li>
+					<a href="#">Flores</a>
+				</li>
+				<li>
+					<a href="#">Herramientas</a>
+				</li>
+				<li>
+					<a href="#">Aditamientos</a>
+				</li>
+			</ul>	
+			</li>
+			<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios<span class="caret"></span></a>	
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#">Creacion</a>
+				</li>
+				<li>
+					<a href="#">Mantenimiento</a>
+				</li>
+				<li>
+					<a href="#">Renovacion</a>
+				</li>
+			</ul>
+			</li>
+			<li>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Con&oacute;cenos<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li>
+					<a href="#">Clientes</a>
+				</li>
+				<li>
+
+					<a href="#" onclick="Mision()">Mision</a>
+					
+				</li>
+				<li>
+					<a href="#" onclick="Vision()">Vision</a>
+					
+				</li>
+				<li>
+					<a href="#" onclick="Valores()">Valores</a>
+				</li>
+				<li>
+					<a href="#">Politicas</a>
+				</li>
+			</ul>
+			</li>
+			<li>
+			<a href="#" onclick="Contacto()">Contacto</a>	
+			</li>
+		</ul>
+
+
+		<form class="navbar-form navbar-right">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Ingrese su busqueda">
+	        </div>
+	        <button type="submit" class="btn btn-default">Buscar</button>
+	      </form>
+	</div>	
+
+	<div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+</div>
+
+
+
+	<div class="row">
+		<div id="ContenidoModal" class="modal-content"></div> 
+	</div>
+    <!--
+	<div class="row">
+		<div id="ContenidoArticulos"></div>
+	</div>-->
+
+
+</div>
+
+
+
+ <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+ <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    window.onload = Inicio();
+
+	function Mision(){
+		
+		$("#ContenidoModal").load("LlamarMision.html");
+
+	}
+	
+	function Vision(){
+		$("#ContenidoModal").load("LlamarVision.html");
+	}
+	function Inicio()
+	{
+		$("#ContenidoModal").load("Home.html");
+		$("#ContenidoArticulos").load("LlamarArticulos.html");
+	}
+    function Contacto(){
+		$("#ContenidoModal").load("LlamarContacto.html");
+	}
+	function Valores(){
+		$("#ContenidoModal").load("LlamarValores.html");
+	}
+
+	
+	
+</script>
+</body>
+</html>
