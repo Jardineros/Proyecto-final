@@ -8,13 +8,10 @@ $usuario = "nan";
 $contrasena = "123456789";
 	
 //Variable para recuperar los datos
-$nombre = $_POST["Nombre"];
-$apellidos = $_POST["Apellidos"];
-$direccion = $_POST["Direccion"];
-$telefono = $_POST["Telefono"];
+
+
 $password = $_POST["Contrasena"];
 $correo = $_POST["Correo"];
-
 
 try {
 	//Se intenta la conexion
@@ -26,27 +23,48 @@ try {
 	 {
 	 	//echo utf8_decode("Conexion Habilitada");
 
-	 	$query = "Insert into cliente(Nombre,Apellidos,Direccion,Telefono,Contrasena,Correo) values (
-	 		'".$nombre."',
-	 		'".$apellidos."',
-	 		'".$direccion."',
-	 		'".$telefono."',
-	 		'".$password."',
-	 		'".$correo."')";
-	 	echo $query;
+
+
+	 	$query = "Select Contrasena from cliente where Correo = '$correo'";
+	 	//echo $query;
+
 	 	$ResultadoOperacion = $conexionMySqli -> query($query);
+
+	 	//$ResultadoOperacion->fetch_assoc();
 	 	
-	 	if($ResultadoOperacion)
+	 	if($ResultadoOperacion->num_rows > 0)
 	 	{
+	 		//print_r($ResultadoOperacion);
 	 		//echo "Operacion Realizada";
-	 		?>
+
+           $fila = $ResultadoOperacion->fetch_assoc(); 
+           
+           	//echo $fila['Contrasena'];
+           
+
+          
+          if($fila['Contrasena'] == $password)
+          {
+
+          	?>
 	 		<div class="text-success">
 	 			<p>Operaci&oacute;n Realizada con &eacute;exito</p>
+
 	 		</div>
            
-           <script type="text/javascript">$("#login").modal("hide");</script>
 
 	 		<?php
+          }
+          else
+          {
+          	?>
+	 		<div class="text-danger text-center">
+	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
+	 		</div>
+	 		<?php
+          }
+
+	 		
 
 	 	}
 	 	else 
