@@ -144,6 +144,18 @@
 </head>
 <body>
 
+<div class="modal fade" id="login" role="dialog" arial-hidden="true" data-backdrop= "static" data-keyboard = "false">
+
+	    <div class="modal-dialog">
+	         <!--Neceita un id para saber sonde se va a cargar la llamada asincrona-->
+			<div class="modal-content" id="ContenidoModal_Inscr_Reins"><!--Contenido-->
+
+				
+			</div>
+			
+		</div>
+    	
+    </div>
 
 
 
@@ -177,6 +189,8 @@
     	</div>
     	
     </div>
+
+
 
 </div>
 
@@ -237,7 +251,9 @@
 					<a href="#">Clientes</a>
 				</li>
 				<li>
-					<a href="#" onclick="Mision()">Mision</a>					
+
+					<a href="#" onclick="Mision()">Mision</a>
+					
 				</li>
 				<li>
 					<a href="#" onclick="Vision()">Vision</a>
@@ -256,8 +272,8 @@
 
 		<form class="navbar-form navbar-right">
 	        
-	        <button type="submit" class="btn btn-default">Ingresar</button>
-	          <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Registrate</a>
+	        <button type="submit" class="btn btn-default" onclick="Ingresar()">Ingresar</button>
+	        <button type="submit" class="btn btn-default" onclick="Registrar()">Registrar</button>
 	      </form>
 	</div>	
 
@@ -289,6 +305,7 @@
 
  <script type="text/javascript" src="js/jquery.js"></script>
  <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+ <script type="text/javascript" src="js/Capturar_Nuevo_Usuario.js"></script>
 <script type="text/javascript">
     window.onload = Inicio();
 
@@ -312,6 +329,22 @@
 	function Valores(){
 		$("#ContenidoModal").load("LlamarValores.html");
 	}
+	function Ingresar()
+	{
+		$("#login").modal("show");
+		$("#ContenidoModal_Inscr_Reins").load("Ingresar_Log.html");
+	}
+	function Registrar()
+	{
+		$("#login").modal("show");
+		$("#ContenidoModal_Inscr_Reins").load("Registrar_Usuario.html");
+	}
+	function cerrarlogin()
+	{
+
+		$("#login").modal("hide");
+	}
+
 
 	</script>
 	<script>

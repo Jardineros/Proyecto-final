@@ -1,0 +1,19 @@
+.BordeIzq
+{
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url("Imagenes/BorIzq.png");
+}
+.color
+{
+	background-color: red;
+	width: 10%;
+	height:10%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
