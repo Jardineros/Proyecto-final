@@ -1,29 +1,83 @@
-<div class="modal-header"><!--Cabecera-->
+<style type="text/css">
+	.top
+	{
+		background-image: url("Imagenes/Tope.png");
+	}
+	#der
+	{
+		
+		background-image: url("Imagenes/Dere.png");
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 90px;
+		height: 270px;
+	}
+	.inf
+	{
+		background-image: url("Imagenes/Infer.png");
+	}
+	#Izq
+	{
+		background-image: url("Imagenes/Izq.png");
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 90px;
+		height: 270px;
+	}
+</style>
+
+<div class="modal-header top"><!--Cabecera-->
 <!--Definimos lo que queremos como un titul de la cavecera-->
-<center>Iniciar Sesion</center>
+
 								
 </div>
-<div class="modal-body"><!--Curpo del modal-->
+<div class="modal-body  "><!--Curpo del modal-->
+   <div id="Izq"></div>
+   <div id="der"></div>
+     
+	
+		<center><h1><b><font face="Lucida Calligraphy">Iniciar Sesion</font></b></h1></center>
 
-<center>Correo Electonico</center>
-<p><center><input id="txtCorreo" type="text" maxlength="40"></center></p>
-<center>PassWord</center>
-<p><center><input id="txtPassword" type="text" maxlength="40"></center></p>
+		<center>Correo Electonico</center>
+		<p><center><input id="txtCorreo" type="text" maxlength="40"></center></p>
+		<center>PassWord</center>
+		<p><center><input id="txtPassword" type="text" maxlength="40"></center></p>
 
-<div id="respuesta" class="row">
+        
+        <center>
+		<!--El boton de cerrar debe estar dentro del contenedor de los modales-->
+		<button type="button" class="btn btn-danger" onclick="OptenerValoresDireccion_ConsultaUsuario()">
+		 <!--Poner un icono al boton-->
+		INICIAR
+		</button>
+		<button type="button" class="btn btn-danger" onclick="Cerrar()">
+		<!--Poner un icono al boton-->
+		Cerrar
+		</button>
 
- </div>
+		</center>
+
+		<div id="respuesta" class="row"></div>
+
+
+
+
+
 
 </div>
 								
-<div class="modal-footer text-center"><!--"Clase opcional", !casi no se usa!. en ocaciones hace que el footer termine dentro del modal-->
+<div class="modal-footer text-center inf"><!--"Clase opcional", !casi no se usa!. en ocaciones hace que el footer termine dentro del modal-->
 
-<center>
-<!--El boton de cerrar debe estar dentro del contenedor de los modales-->
-<button type="button" class="btn btn-danger" onclick="OptenerValoresDireccion_ConsultaUsuario()">
- <!--Poner un icono al boton-->
-INICIAR
-</button>
-</center>
+
 
 </div>
+
+<script type="text/javascript">
+function Cerrar()
+{
+  $("#login").modal("hide");
+}
+
+</script>

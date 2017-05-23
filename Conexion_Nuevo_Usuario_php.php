@@ -20,7 +20,10 @@ try {
 	//Se intenta la conexion
 	$conexionMySqli = new mysqli($servidor,$usuario,$contrasena,$basedatos);
 	if ($conexionMySqli -> connect_errno) {
-	 	echo "Fallo la conexion con MySQL: (". $conexionMySqli -> connect_errno . ")" . $conexionMySqli -> connect_error;
+	 	//echo "Fallo la conexion con MySQL: (". $conexionMySqli -> connect_errno . ")" . $conexionMySqli -> connect_error;
+	 	?>
+        <script type="text/javascript">window.alert("ERROR EN LA BASE DE DATOS");</script>
+	 	<?php
 	 } 
 	 else
 	 {
@@ -33,16 +36,17 @@ try {
 	 		'".$telefono."',
 	 		'".$password."',
 	 		'".$correo."')";
-	 	echo $query;
+	 	//echo $query;
 	 	$ResultadoOperacion = $conexionMySqli -> query($query);
 	 	
 	 	if($ResultadoOperacion)
 	 	{
 	 		//echo "Operacion Realizada";
 	 		?>
+	 		<!--
 	 		<div class="text-success">
 	 			<p>Operaci&oacute;n Realizada con &eacute;exito</p>
-	 		</div>
+	 		</div>-->
            
            <script type="text/javascript">$("#login").modal("hide");</script>
 
@@ -53,9 +57,11 @@ try {
 	 	{
 	 		//echo "Fallo en Operacion";
 	 		?>
+	 		<!--
 	 		<div class="text-danger text-center">
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
-	 		</div>
+	 		</div>-->
+	 		<script type="text/javascript">window.alert("Ocurrio Un Error en el proceso de registrar");</script>
 	 		<?php
 
 	 	}

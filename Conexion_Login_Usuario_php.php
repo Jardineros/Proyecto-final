@@ -47,20 +47,26 @@ try {
           {
 
           	?>
-	 		<div class="text-success">
+	 		<!--<div class="text-success">
 	 			<p>Operaci&oacute;n Realizada con &eacute;exito</p>
 
-	 		</div>
+	 		</div>-->
            
+          <script type="text/javascript">$("#login").modal("hide");</script>
 
+          
 	 		<?php
           }
           else
           {
           	?>
+          	<!--
 	 		<div class="text-danger text-center">
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
-	 		</div>
+	 		</div>-->
+
+	 		<script type="text/javascript">window.alert("Correo o Contraseña Incorrecta");</script>
+
 	 		<?php
           }
 
@@ -71,9 +77,13 @@ try {
 	 	{
 	 		//echo "Fallo en Operacion";
 	 		?>
+	 		<!--
 	 		<div class="text-danger text-center">
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
-	 		</div>
+	 		</div>-->
+              
+            <script type="text/javascript">window.alert("Correo o Contraseña Incorrecta");</script>
+
 	 		<?php
 
 	 	}

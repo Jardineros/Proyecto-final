@@ -13,7 +13,7 @@ function OptenerValoresDireccion_ConsultaUsuario()
     	$("#respuesta").html(data);
 
     }
-
 	);
 
 }
+
