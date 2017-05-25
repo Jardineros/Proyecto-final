@@ -1,14 +1,47 @@
+    <style type="text/css">
+    	.FondoArticulos
+    	{
+    		background-color: rgba(0,0,0,0.7);
+    		position: relative;
+    		float: left;
+    		width: 100%;
+    		height: 100%;
+    		z-index: 5;
+    	}
+    	.Texto
+    	{
+    		color: white;
+    	}
+    	.Texto:hover
+    	{
+    		color: yellow;
+    	}
+    </style>
 
 
-<div class="container">
-	<div class="row Articulos">
+	<!--<div class="row Articulos">
 		<div class="col-xs-12 Articulo1" style="cursor:pointer;"><h1><center>LOS MEJORES PRODUCTOS</center></h1></div>
+	</div>-->
+	<div class="row FondoArticulos Texto" onclick="Artic1()">
+		<div class="col-xs-6 " style="cursor:pointer;"><h1><center><img src="Imagenes/prod1" width="100px" height="100px"></center></h1></div>
+		<div class="col-xs-6 " style="cursor:pointer;"><h1><center>Las mejores flores de la temporada</center></h1></div>
 	</div>
-	<div class="row Articulos">
-		<div class="col-xs-6" style="cursor:pointer;"><h1><center>A</center></h1></div>
-		<div class="col-xs-6" style="cursor:pointer;"><h1><center>S</center></h1></div>
-	</div>
-</div>
-	
-</div>
+
+    <div class="row FondoArticulos Texto">
+        <div class="col-xs-6 " style="cursor:pointer;"><h1><center><img src="Imagenes/prod2" width="100px" height="100px"></center></h1></div>
+        <div class="col-xs-6 " style="cursor:pointer;"><h1><center>El mejor paquete de flores de la temporada</center></h1></div>
+    </div>
+   
+    <div class="row FondoArticulos Texto">
+        <div class="col-xs-6 " style="cursor:pointer;"><h1><center><img src="Imagenes/prod3" width="100px" height="100px"></center></h1></div>
+        <div class="col-xs-6 " style="cursor:pointer;"><h1><center>Los mejores tulipanes</center></h1></div>
+    </div>
+   
+    <script type="text/javascript">
+    	function Artic1()
+	{
+		$("#login").modal("show");
+		$("#ContenidoModal_Inscr_Reins").load("Inf_Artic_1.html");
+	}
+    </script>
 
