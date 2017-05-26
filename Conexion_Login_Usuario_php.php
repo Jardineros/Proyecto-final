@@ -65,7 +65,7 @@ try {
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
 	 		</div>-->
 
-	 		<script type="text/javascript">window.alert("Correo o Contraseña Incorrecta");</script>
+	 		<script type="text/javascript">window.alert("Correo o contraseña incorrecta");</script>
 
 	 		<?php
           }
@@ -82,7 +82,7 @@ try {
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
 	 		</div>-->
               
-            <script type="text/javascript">window.alert("Correo o Contraseña Incorrecta");</script>
+            <script type="text/javascript">window.alert("Correo o contraseña incorrecta");</script>
 
 	 		<?php
 

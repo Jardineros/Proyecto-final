@@ -22,7 +22,7 @@ try {
 	if ($conexionMySqli -> connect_errno) {
 	 	//echo "Fallo la conexion con MySQL: (". $conexionMySqli -> connect_errno . ")" . $conexionMySqli -> connect_error;
 	 	?>
-        <script type="text/javascript">window.alert("ERROR EN LA BASE DE DATOS");</script>
+        <script type="text/javascript">window.alert("OCURRIÓ UN ERROR EN LA CONEXIÓN");</script>
 	 	<?php
 	 } 
 	 else
@@ -61,7 +61,7 @@ try {
 	 		<div class="text-danger text-center">
 	 			<p>Operaci&oacute;n <p>NO</p> Realizada</p>
 	 		</div>-->
-	 		<script type="text/javascript">window.alert("Ocurrio Un Error en el proceso de registrar");</script>
+	 		<script type="text/javascript">window.alert("Ocurrió un error en el proceso de registro");</script>
 	 		<?php
 
 	 	}
