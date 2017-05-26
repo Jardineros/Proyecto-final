@@ -42,15 +42,15 @@
 <center><h1><b><font face="Lucida Calligraphy">BIENVENIDO</font></b></h1></center>
 
 <center>Nombre</center>
-<p><center><input id="txtNombre" type="text" maxlength="20"></center></p>
+<p><center><input id="txtNombre" type="text" maxlength="20" onkeypress="return SoloLetras(event)"></center></p>
 <center>Apellidos</center>
-<p><center><input id="txtApellidos" type="text" maxlength="40"></center></p>
+<p><center><input id="txtApellidos" type="text" maxlength="40" onkeypress="return SoloLetras(event)"></center></p>
 <center>Direcci&oacute;n</center>
-<p><center><input id="txtDireccion" type="text" maxlength="40"></center></p>
+<p><center><input id="txtDireccion" type="text" maxlength="40" onkeypress="return SoloDirecciones(event)"></center></p>
 <center>Tel&eacute;fono</center>
-<p><center><input id="txtTelefono" type="text" maxlength="9"></center></p>
+<p><center><input id="txtTelefono" type="text" maxlength="9" onkeypress="return SoloNumero(event)" ></center></p>
 <center>Correo electr&oacute;nico</center>
-<p><center><input id="txtCorreo" type="text" maxlength="40"></center></p>
+<p><center><input id="txtCorreo" type="text" maxlength="40" onchange="return ValidarCorreoElectonico(event)"></center></p>
 <center>Contrase&ntilde;a</center>
 <p><center><input id="txtPassword" type="text" maxlength="40"></center></p>
 
@@ -82,5 +82,6 @@ function Cerrar()
 {
   $("#login").modal("hide");
 }
+
 
 </script>

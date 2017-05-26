@@ -42,15 +42,15 @@
 <center><h1><b><font face="Lucida Calligraphy">NUEVO PRODUCTO</font></b></h1></center>
 
 <center>Nombre del producto</center>
-<p><center><input id="txtNombreProducto" type="text" maxlength="40"></center></p>
+<p><center><input id="txtNombreProducto" type="text" maxlength="40" onkeypress="return SoloLetras(event)"></center></p>
 <center>Informaci&oacute;n acerca del producto</center>
-<p><center><input id="txtDescipcionProducto" type="text" maxlength="150"></center></p>
+<p><center><input id="txtDescipcionProducto" type="text" maxlength="150" onkeypress="return SoloLetras(event)"></center></p>
 <center>Costo del producto</center>
-<p><center><input id="txtCosto" type="text" maxlength="11"></center></p>
+<p><center><input id="txtCosto" type="text" maxlength="11" onkeypress="return SoloNumero(event)"></center></p>
 <center>Stock</center>
-<p><center><input id="txtStock" type="text" maxlength="11"></center></p>
+<p><center><input id="txtStock" type="text" maxlength="11" onkeypress="return SoloNumero(event)"></center></p>
 <center>Id del tipo de producto</center>
-<p><center><input id="txtID_Tipo" type="text"></center></p>
+<p><center><input id="txtID_Tipo" type="text" onkeypress="return SoloNumero(event)"></center></p>
 
 
 <center>
