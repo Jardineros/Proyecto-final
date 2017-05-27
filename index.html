@@ -7,6 +7,42 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="css/simple-sidebar.css" rel="stylesheet">
 	<style type="text/css">
+        
+        .BotonSR
+		{
+			background-color: white;
+		    border: none;//*Sin Borde*/
+		    color: white;/*Color*/
+		    /*padding: 16px 32px;*//*Relleno del botton*/
+		    text-align: center;/*Texto centrado*/
+		    text-decoration: none;/*Texto din decoracion*/
+
+		    display: inline-block;
+		    /*font-size: 16px;*/
+		    /*margin: 4px 5px;*/ /*Margen*/
+		    margin: 0;
+		    padding: 7px;/*margen de relleno ancho,largo*/
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		    cursor: pointer;/*Cursor*/
+		}
+		/*Estilos secundarios del boton*/
+		.Boton
+		{
+			font-family: Arial;
+			background-color: rgba(0,0,0,0.5); 
+			font-size: 20px;
+		    color: white; 
+		    /*border: 2px solid #a6a6a6;*/
+		}
+
+		.Boton:hover
+		{
+			background-color: orange;
+		    color: white;
+
+		}
+
 		.Encabezado
 		{
 			background-color: green;
@@ -139,7 +175,7 @@
     <div id="page-content-wrapper">
     	<div class="container-fluid">
     		<div class="row">
-    			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Perfil</a>
+    			<a href="#menu-toggle" class="Boton BotonSR" id="menu-toggle">Perfil</a>
     		</div>
     	</div>
     	
@@ -260,9 +296,9 @@
 
  <script type="text/javascript" src="js/jquery.js"></script>
  <script src="js/bootstrap.min.js" type="text/javascript"></script> 
- <script type="text/javascript" src="js/Capturar_Nuevo_Usuario.js"></script>
- <script type="text/javascript" src="js/Optener_Valor_Para_Consulta.js"></script>
- <script type="text/javascript" src="js/Capturar_Nuevo_Producto.js"></script>
+ 
+ 
+
 <script type="text/javascript">
     window.onload = Inicio();
 
@@ -318,32 +354,32 @@
 
     <!--Validaciones para las cajas de textgo de solo aceptar numeros o letras-->
 	<script type="text/javascript">
-		function SoloNumero(e)
-{
-	Key=e.KeyCode || e.which;
+	function SoloNumero(e)
+	{
+		Key=e.KeyCode || e.which;
 
-	teclado = String.fromCharCode(Key);
+		teclado = String.fromCharCode(Key);
 
-	numero = "0123456789";
+		numero = "0123456789";
 
-	especiales = "8-37-38-46";
+		especiales = "8-37-38-46";
 
-	teclado_especial = false;
+		teclado_especial = false;
 
-	for (var i in especiales)
-	 {
-		if (Key == especiales[i]) 
+		for (var i in especiales)
+		 {
+			if (Key == especiales[i]) 
+			{
+				teclado_especial = true;
+			}
+		}
+
+		if(numero.indexOf(teclado) == -1 && !teclado_especial)
 		{
-			teclado_especial = true;
+			return false;
+
 		}
 	}
-
-	if(numero.indexOf(teclado) == -1 && !teclado_especial)
-	{
-		return false;
-
-	}
-}
 
 function SoloLetras(e)
 {

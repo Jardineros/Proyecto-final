@@ -15,7 +15,6 @@ $stock = $_POST["Stock"];
 $ID_Tipo = $_POST["ID_Tipo"];
 
 
-
 try {
 	//Se intenta la conexion
 	$conexionMySqli = new mysqli($servidor,$usuario,$contrasena,$basedatos);

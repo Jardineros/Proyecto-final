@@ -1,3 +1,8 @@
+<?php
+include("conexion.php");
+$con=conectarse();
+?>
+
 <style type="text/css">
 	.top
 	{
@@ -11,7 +16,7 @@
 		top: 0px;
 		right: 0px;
 		width: 90px;
-		height: 490px;
+		height: 500px;
 	}
 	.inf
 	{
@@ -24,7 +29,7 @@
 		top: 0px;
 		left: 0px;
 		width: 90px;
-		height: 490px;
+		height: 500px;
 	}
 </style>
 
@@ -49,13 +54,25 @@
 <p><center><input id="txtCosto" type="text" maxlength="11" onkeypress="return SoloNumero(event)"></center></p>
 <center>Stock</center>
 <p><center><input id="txtStock" type="text" maxlength="11" onkeypress="return SoloNumero(event)"></center></p>
-<center>Id del tipo de producto</center>
-<p><center><input id="txtID_Tipo" type="text" onkeypress="return SoloNumero(event)"></center></p>
+<br>
+<center>Categoria</center><br>
+<center><select id="txtid_tipo_producto">
+					<option selected="selected">Ninguna</option>
+                    <?php
+                        $result2=$con->query("SELECT * FROM tipo_producto ORDER BY Categoria ASC" );
+                        while($row2 = $result2->fetch_array())
+                        {
+                            echo "<option value='1'>GENERAL</option>";
+                            echo "<option value='2'>HERRAMIENTAS</option>";
+                            
+                        }
+                    ?>
+                </select></center></br>
 
 
 <center>
 <!--El boton de cerrar debe estar dentro del contenedor de los modales-->
-<button type="button" class="btn btn-danger" onclick="OptenerValores_Nuevo_Usuario()">
+<button type="button" class="btn btn-danger" onclick="OptenerValores_Nuevo_Producto()">
  <!--Poner un icono al boton-->
 Registrar
 </button>
@@ -75,6 +92,8 @@ Cancelar
 <div class="modal-footer text-center inf"><!--"Clase opcional", !casi no se usa!. en ocaciones hace que el footer termine dentro del modal-->
 
 </div>
+
+ <script type="text/javascript" src="js/Capturar_Nuevo_Producto.js"></script>
 
 <script type="text/javascript">
 function Cerrar()

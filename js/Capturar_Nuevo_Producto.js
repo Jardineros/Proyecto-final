@@ -1,4 +1,4 @@
-function OptenerValores_Nuevo_Usuario()
+function OptenerValores_Nuevo_Producto()
 {
 	var url = "Conexion_Nuevo_Producto_php.php";
 	$.post(url,
@@ -7,7 +7,8 @@ function OptenerValores_Nuevo_Usuario()
 		Descripcion:$("#txtDescipcionProducto").val(),
 		Costo:$("#txtCosto").val(),
 		Stock:$("#txtStock").val(),
-		ID_Tipo:$("#txtID_Tipo").val()
+		ID_Tipo:$("#txtid_tipo_producto").val()		
+		
 	},
     
     function (data)
